@@ -62,10 +62,10 @@
         def stepsForParallel = data.collectEntries{ d ->
             ["${d.name}", 
                 {
-                    stage("${d.name}") {
-                        println "DownstreamJob ${d.name} start")
-                        execDownStreamJob("DownStreamJobName", d)
-                        println "DownstreamJob ${d.name} end")
+                    stage("${d.name}"{
+                        println "DownstreamJob ${d.name} start"
+                    //    execDownStreamJob("DownStreamJobName", d)
+                        println "DownstreamJob ${d.name} end"
                     }
                 }
             ]
