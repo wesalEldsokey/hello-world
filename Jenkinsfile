@@ -43,7 +43,7 @@
                     data.each { d ->
                         // name is a key in the data map
                         stepsForParallel["${d['name']}"] = {
-                            node {
+                            
                                 stage("${d['name']}") {
                                     stepsForParallel[execDownStreamJob("DownStreamJobName", d)] = {
                                         println("Executing DownstreamJob")
