@@ -1,11 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage ('clone the repo') {
-            steps {
-                git clone 'https://github.com/wesalEldsokey/hello-world'
-            }
-        }
+      
         
         
         
