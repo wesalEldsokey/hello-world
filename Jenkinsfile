@@ -27,16 +27,14 @@
 // }
     pipeline {
 
-        agent {
-            label "l1" && "l2"
-        }
+        agent any
 
         stages {
 
             stage ('Prepare Data') {
                 // Some code that creates that data object
                 // data is an array of maps
-                data
+              echo '  data'
             }
 
             stage ('Build') {
@@ -59,5 +57,4 @@
             }
 
         }
-    }
-}
+    
