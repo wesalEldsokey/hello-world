@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     // we've declared the variable, now we give it the values
-                    files = findFiles(glob: '**/html/*.html')
+                    files = findFiles()
                     // Loop through them
                     files.each { f ->
                         // add each object from the 'files' loop to the 'tests' array
