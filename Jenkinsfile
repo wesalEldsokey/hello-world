@@ -38,7 +38,7 @@
             }
 
             stage ('Build') {
-                script {
+                steps {
                     def stepsForParallel = [:]
                     data.each { d ->
                         // name is a key in the data map
