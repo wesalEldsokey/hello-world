@@ -28,10 +28,11 @@ agent any
                 script {
                     echo "Building Docker image"
                     withCredentials([usernamePassword (credentialsId: 'wesal-docker' , passwordVariable: 'PASS', usernameVariable: 'USER')])
-                    sh 'docker build -t wesalEldsokey/hello-world .'
-                    sh "echo $PASS | docker loging -u $USER --password-stdin"
-                    sh 'docker push wesalEldsokey/hello-world'
-                }
+                    {
+                        sh 'docker build -t wesalEldsokey/hello-world .'
+                        sh "echo $PASS | docker loging -u $USER --password-stdin"
+                        sh 'docker push wesalEldsokey/hello-world'
+                    }}
             }
         
         }
