@@ -9,7 +9,7 @@ agent any
     
         stage ('code building') {
             steps {
-                Script{
+                script{
                   sh 'mv package'
                 }
             }
