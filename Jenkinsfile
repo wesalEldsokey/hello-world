@@ -27,7 +27,7 @@ agent any
             steps {
                 script {
                     echo "Building Docker image"
-                    withcredentials([usernamePassword (credentialsId: 'wesal-docker' , passwordVariable: 'PASS', username: 'USER')])
+                    withCredentials([usernamePassword (credentialsId: 'wesal-docker' , passwordVariable: 'PASS', username: 'USER')])
                     sh 'docker build -t wesalEldsokey/hello-world .'
                     sh "echo $PASS | docker loging -u $USER --password-stdin"
                     sh 'docker push wesalEldsokey/hello-world'
