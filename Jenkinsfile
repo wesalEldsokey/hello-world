@@ -10,7 +10,7 @@ agent any
         stage ('code building') {
             steps {
                 script{
-                  sh 'mvn package'
+             //     sh 'mvn package'
                 }
             }
           
